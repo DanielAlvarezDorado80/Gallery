@@ -1,0 +1,439 @@
+ /*
+            VARIABLES (simulando _variables.scss)
+        */
+        :root {
+            --color-primary: #D5966C;    /* Naranja/Marrón */
+            --color-dark: #151515;       /* Gris muy oscuro */
+            --color-medium-gray: #444444; /* Gris medio */
+            --color-white: #FFFFFF;     /* Blanco */
+
+            --font-heading: 'Big Shoulders Display', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+
+            /* Tamaños y espaciados de línea basados en el PDF */
+            --font-size-xl-heading: 96px;
+            --line-height-xl-heading: 88px;
+
+            --font-size-l-heading: 70px;
+            --line-height-l-heading: 70px;
+
+            --font-size-m-heading: 60px;
+            --line-height-m-heading: 50px;
+
+            --font-size-s-heading: 36px;
+            --line-height-s-heading: 36px;
+
+            --font-size-m-body: 22px;
+            --line-height-m-body: 32px;
+
+            --font-size-s-body: 18px;
+            --line-height-s-body: 28px;
+
+            /* Breakpoints para mobile-first */
+            --breakpoint-tablet: 768px;
+            --breakpoint-desktop: 1024px;
+        }
+
+        /*
+            GLOBALES Y RESET BÁSICO (Mobile First)
+        */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px; /* Base para REMs */
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body); /* Fuente base para el cuerpo */
+            color: var(--color-white); /* Color de texto predeterminado */
+            background-color: var(--color-dark); /* Color de fondo principal */
+            line-height: 1.6;
+            overflow-x: hidden; /* Evita el scroll horizontal */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Un max-width común para el contenido */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem; /* Un padding lateral para el móvil */
+            padding-right: 1.5rem; /* Un padding lateral para el móvil */
+        }
+
+        /*
+            TIPOGRAFÍA (Clases para aplicar estilos desde las variables)
+        */
+        .heading-xl {
+            font-family: var(--font-heading);
+            font-weight: 900; /* Black */
+            font-size: clamp(2.5rem, 8vw + 1rem, var(--font-size-xl-heading)); /* Responsive font size */
+            line-height: clamp(2.5rem, 8vw + 1rem, var(--line-height-xl-heading)); /* Responsive line height */
+            text-transform: uppercase;
+        }
+
+        .heading-l {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(2rem, 6vw + 1rem, var(--font-size-l-heading));
+            line-height: clamp(2rem, 6vw + 1rem, var(--line-height-l-heading));
+            text-transform: uppercase;
+        }
+
+        .heading-m {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(1.8rem, 5vw + 1rem, var(--font-size-m-heading));
+            line-height: clamp(1.8rem, 5vw + 1rem, var(--line-height-m-heading));
+            text-transform: uppercase;
+        }
+
+        .heading-s {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(1.5rem, 4vw + 1rem, var(--font-size-s-heading));
+            line-height: clamp(1.5rem, 4vw + 1rem, var(--line-height-s-heading));
+            text-transform: uppercase;
+        }
+
+        .body-m {
+            font-family: var(--font-body);
+            font-weight: 300; /* Light */
+            font-size: clamp(1rem, 2vw + 0.5rem, var(--font-size-m-body));
+            line-height: clamp(1.5rem, 3vw + 0.5rem, var(--line-height-m-body));
+        }
+
+        .body-s {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: clamp(0.9rem, 1.5vw + 0.5rem, var(--font-size-s-body));
+            line-height: clamp(1.2rem, 2.5vw + 0.5rem, var(--line-height-s-body));
+        }
+
+        /*
+            BOTONES
+        */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 2.5rem; /* Ajusta según el diseño de Figma */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: var(--font-size-s-body); /* Tamaño de texto para botón */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+            border-radius: 0; /* Sin bordes redondeados según el PDF */
+        }
+
+        .button--primary {
+            background-color: var(--color-dark); /* Color de fondo del botón */
+            color: var(--color-white); /* Color del texto del botón */
+
+            .arrow-icon {
+                margin-left: 1rem; /* Espacio entre texto y flecha */
+                display: inline-block;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background-color: var(--color-primary); /* Estado hover */
+                color: var(--color-dark); /* Color de texto en hover */
+            }
+            &:hover .arrow-icon {
+                transform: translateX(5px); /* Pequeño movimiento en hover */
+            }
+        }
+
+        .button--secondary {
+            background-color: var(--color-primary); /* Color de fondo del botón */
+            color: var(--color-white); /* Color del texto del botón */
+
+            .arrow-icon {
+                margin-right: 1rem; /* Espacio entre texto y flecha */
+                display: inline-block;
+                transform: rotate(180deg); /* Para la flecha izquierda */
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background-color: var(--color-dark); /* Estado hover */
+                color: var(--color-white); /* Color de texto en hover */
+            }
+            &:hover .arrow-icon {
+                transform: translateX(-5px) rotate(180deg); /* Pequeño movimiento en hover */
+            }
+        }
+
+        /*
+            LAYOUT - HEADER
+        */
+        .main-header {
+            background-color: transparent; /* Transparente para superponerse al hero */
+            padding: 2rem 0;
+            position: absolute; /* Posiciona sobre el hero */
+            width: 100%;
+            z-index: 100;
+
+            .container {
+                display: flex;
+                justify-content: center; /* Centra el logo en móvil */
+                align-items: center;
+            }
+
+            .logo {
+                font-family: var(--font-heading);
+                font-weight: 900;
+                font-size: var(--font-size-s-heading); /* Tamaño para móvil */
+                text-transform: uppercase;
+                letter-spacing: 0.1em; /* Ajuste para que se vea como en el PDF */
+
+                a {
+                    color: var(--color-white);
+                    text-decoration: none;
+                }
+            }
+        }
+
+        /*
+            SECCIONES PRINCIPALES
+        */
+        .hero-section {
+            background: var(--color-dark) url('https://placehold.co/1200x800/151515/FFFFFF?text=Gallery+Interior') no-repeat center center/cover; /* Placeholder de imagen */
+            min-height: 80vh; /* Altura mínima para que se vea el contenido */
+            display: flex;
+            align-items: center; /* Centra verticalmente el contenido */
+            position: relative;
+            padding: 4rem 0; /* Asegura espacio para el header y el contenido */
+            text-align: center; /* Centrado para móvil */
+
+            .hero-content {
+                padding: 2rem 0; /* Padding interno */
+            }
+            .heading-xl {
+                margin-bottom: 1.5rem;
+            }
+            .body-m {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .your-day-section {
+            background-color: var(--color-white);
+            color: var(--color-dark);
+            padding: 4rem 0;
+            text-align: center; /* Centrado para móvil */
+
+            .heading-l {
+                margin-bottom: 1.5rem;
+            }
+            .body-m {
+                margin-bottom: 2rem;
+            }
+
+            .gallery-images {
+                display: grid;
+                grid-template-columns: 1fr; /* Una columna en móvil */
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .gallery-image-item {
+                background-color: var(--color-medium-gray); /* Placeholder de imagen */
+                min-height: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: var(--font-heading);
+                color: var(--color-white);
+                font-size: 1.5rem;
+                background-size: cover;
+                background-position: center;
+            }
+            .gallery-image-item:nth-child(1) { background-image: url('https://placehold.co/600x400/444444/FFFFFF?text=Art+Piece+1'); }
+            .gallery-image-item:nth-child(2) { background-image: url('https://placehold.co/600x400/444444/FFFFFF?text=Art+Piece+2'); }
+            .gallery-image-item:nth-child(3) { background-image: url('https://placehold.co/600x400/444444/FFFFFF?text=Art+Piece+3'); }
+        }
+
+        .location-info-section {
+            background-color: var(--color-dark);
+            padding: 4rem 0;
+            text-align: center; /* Centrado para móvil */
+
+            .heading-l {
+                margin-bottom: 1.5rem;
+            }
+            .location-details {
+                margin-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .heading-s {
+                margin-bottom: 1rem;
+                color: var(--color-primary); /* Color del texto de la dirección */
+            }
+            .body-m {
+                margin-bottom: 2rem;
+            }
+            .map-placeholder {
+                width: 100%;
+                height: 300px; /* Altura del mapa */
+                background-color: var(--color-medium-gray);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: var(--font-heading);
+                color: var(--color-white);
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                background-image: url('https://placehold.co/800x400/444444/FFFFFF?text=Map+Placeholder');
+                background-size: cover;
+                background-position: center;
+            }
+            .back-home-button-wrapper {
+                margin-top: 2rem;
+            }
+        }
+
+        .inspiration-section {
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            padding: 4rem 0;
+            text-align: center; /* Centrado para móvil */
+
+            .heading-l {
+                margin-bottom: 1.5rem;
+            }
+            .body-m {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /*
+            FOOTER
+        */
+        .main-footer {
+            background-color: var(--color-dark);
+            padding: 3rem 0;
+            text-align: center;
+
+            .logo-footer {
+                font-family: var(--font-heading);
+                font-weight: 900;
+                font-size: var(--font-size-s-heading);
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                letter-spacing: 0.1em;
+            }
+
+            .body-s {
+                margin-bottom: 1.5rem;
+            }
+
+            .social-links {
+                margin-top: 1rem;
+                a {
+                    display: inline-block;
+                    margin: 0 0.5rem;
+                    /* Estilos para el icono SVG */
+                    svg {
+                        width: 24px; /* Ajusta el tamaño del icono */
+                        height: 24px;
+                        fill: var(--color-white);
+                        transition: fill 0.3s ease;
+                    }
+                    &:hover svg {
+                        fill: var(--color-primary); /* Ejemplo de hover para SVG */
+                    }
+                }
+            }
+        }
+
+
+        /*
+            MEDIA QUERIES - Para Tablets y Escritorio (desde móvil hacia arriba)
+        */
+
+        @media (min-width: var(--breakpoint-tablet)) {
+            .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .main-header .container {
+                justify-content: flex-start; /* Alinea el logo a la izquierda en tablet */
+            }
+
+            .hero-section {
+                text-align: left; /* Alinea el contenido a la izquierda en tablet */
+                min-height: 90vh; /* Mayor altura en pantallas más grandes */
+            }
+            .your-day-section,
+            .location-info-section,
+            .inspiration-section {
+                text-align: left; /* Alinea el contenido a la izquierda */
+            }
+
+            .your-day-section .gallery-images {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablet */
+            }
+
+            .main-footer {
+                text-align: left;
+                .footer-content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay espacio */
+                }
+                .logo-footer {
+                    margin-bottom: 0;
+                }
+                .body-s {
+                    flex-basis: 60%; /* Ocupa más espacio para el texto */
+                    margin-bottom: 0;
+                }
+                .social-links {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        @media (min-width: var(--breakpoint-desktop)) {
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .main-header .logo {
+                font-size: var(--font-size-l-heading); /* Tamaño más grande para escritorio */
+            }
+
+            .hero-section {
+                min-height: 100vh; /* Altura completa en escritorio */
+            }
+            .hero-section .hero-content {
+                max-width: 50%; /* Limita el ancho del texto para mejor lectura */
+            }
+
+            .your-day-section .gallery-images {
+                grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorio */
+            }
+
+            .location-info-section .map-placeholder {
+                height: 500px; /* Mayor altura del mapa */
+            }
+        }
