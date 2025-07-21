@@ -1,0 +1,265 @@
+@import 'variables'; // Importa tus variables
+
+/*
+    GLOBALES Y RESET BÁSICO (Mobile First)
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px; // Base para REMs
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-body; [cite_start]// Fuente base para el cuerpo [cite: 269]
+    color: $color-white; [cite_start]// Color de texto predeterminado [cite: 262]
+    background-color: $color-dark; [cite_start]// Color de fondo principal [cite: 248]
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; // Un max-width común para el contenido
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; // Un padding lateral para el móvil
+    padding-right: 1rem; // Un padding lateral para el móvil
+}
+
+/*
+    TIPOGRAFÍA (Clases para aplicar estilos desde las variables)
+*/
+.heading-xl {
+    font-family: $font-heading;
+    font-weight: 900; // Black
+    font-size: $font-size-xl-heading;
+    line-height: $line-height-xl-heading;
+    text-transform: uppercase;
+}
+
+.heading-l {
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: $font-size-l-heading;
+    line-height: $line-height-l-heading;
+    text-transform: uppercase;
+}
+
+.heading-m {
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: $font-size-m-heading;
+    line-height: $line-height-m-heading;
+    text-transform: uppercase;
+}
+
+.heading-s {
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: $font-size-s-heading;
+    line-height: $line-height-s-heading;
+    text-transform: uppercase;
+}
+
+.body-m {
+    font-family: $font-body;
+    font-weight: 300; // Light
+    font-size: $font-size-m-body;
+    line-height: $line-height-m-body;
+}
+
+.body-s {
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: $font-size-s-body;
+    line-height: $line-height-s-body;
+}
+
+/*
+    BOTONES
+*/
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem; // Ajusta según el diseño de Figma
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-heading;
+    font-weight: 900;
+    font-size: $font-size-s-body; [cite_start]// O el tamaño de botón que tenga el diseño [cite: 285]
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button--primary {
+    background-color: $color-dark; [cite_start]// Color de fondo del botón [cite: 289]
+    color: $color-white; [cite_start]// Color del texto del botón [cite: 289]
+    border: none;
+
+    .arrow-icon {
+        margin-left: 1rem; // Espacio entre texto y flecha
+        // Propiedades para SVG si es necesario (tamaño, color)
+    }
+
+    &:hover {
+        background-color: $color-primary; [cite_start]// Estado hover [cite: 293]
+        color: $color-dark; // Color de texto en hover
+    }
+}
+
+/*
+    LAYOUT - HEADINGS
+*/
+.main-header {
+    background-color: $color-dark; // O transparente si va sobre la imagen
+    padding: 1rem 0;
+    position: relative; // Para posicionamiento del logo
+    z-index: 100;
+
+    .logo {
+        font-family: $font-heading;
+        font-weight: 900;
+        font-size: $font-size-s-heading; [cite_start]// Tamaño para móvil [cite: 283]
+        text-transform: uppercase;
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+}
+
+/*
+    SECCIONES PRINCIPALES
+*/
+.hero-section {
+    background-color: $color-medium-gray; // Placeholder, aquí iría la imagen de fondo
+    min-height: 50vh; // Altura mínima para que se vea el contenido en móvil
+    display: flex;
+    align-items: center; // Centra verticalmente el contenido
+    position: relative;
+    overflow: hidden; // Para la imagen de fondo
+
+    .hero-content {
+        padding: 2rem 0; // Padding interno
+        text-align: center; // Ajustar según diseño, pero centrado para móvil es común
+    }
+    .heading-xl {
+        margin-bottom: 1rem;
+    }
+    .body-m {
+        margin-bottom: 2rem;
+    }
+}
+
+.your-day-section,
+.location-info-section,
+.inspiration-section {
+    padding: 3rem 0; // Espaciado vertical entre secciones
+    text-align: center; // Centrado para móvil
+    .heading-l {
+        margin-bottom: 1.5rem;
+    }
+    .body-m {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.location-info-section {
+    background-color: $color-dark; // O un color de fondo diferente
+    .location-details {
+        margin-top: 2rem;
+        .heading-s {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.main-footer {
+    background-color: $color-dark; [cite_start]// O un color de fondo de pie de página [cite: 10]
+    padding: 2rem 0;
+    text-align: center;
+
+    .logo-footer {
+        font-family: $font-heading;
+        font-weight: 900;
+        font-size: $font-size-s-heading;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+        a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            // Estilos para el icono SVG
+            svg {
+                width: 24px; // Ajusta el tamaño del icono
+                height: 24px;
+                fill: $color-white;
+                transition: fill 0.3s ease;
+            }
+            &:hover svg {
+                fill: $color-primary; // Ejemplo de hover para SVG
+            }
+        }
+    }
+}
+
+
+/*
+    MEDIA QUERIES - Para Tablets y Escritorio (desde móvil hacia arriba)
+*/
+
+@media (min-width: $breakpoint-tablet) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hero-section .hero-content {
+        text-align: left; // Alinear a la izquierda en pantallas más grandes
+    }
+    .your-day-section,
+    .location-info-section,
+    .inspiration-section {
+        text-align: left; // Alinear a la izquierda
+    }
+    .main-footer {
+        text-align: left;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-footer {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    // Ajustes de tamaño de fuente y línea para escritorio si son diferentes a los de móvil
+    .heading-xl {
+        font-size: $font-size-xl-heading;
+        line-height: $line-height-xl-heading;
+    }
+    .heading-l {
+        font-size: $font-size-l-heading;
+        line-height: $line-height-l-heading;
+    }
+    // ... y así para el resto de headings y body
+}

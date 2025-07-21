@@ -9,60 +9,120 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">    
-
+  
 </head>
-<body>
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo">
-                <a href="#home">MODERN ART GALLERY</a>
-            </h1>
-        </div>
-    </header>
-
+<body >
     <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="heading-xl">MODERN ART GALLERY</h2>
-                    <p class="body-m">The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.</p>
-                    <a href="#location-info" class="button button--primary">
-                        OUR LOCATION
-                        <span class="arrow-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.43 5.92999L20.5 12L14.43 18.07" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M3.5 12H20.33" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
+        <section id="hero" style="background-color: var(--color-white);">
+
+                     <table style="border: none">
+                        <tr>
+                             <td style="background-color: var(--color-dark)">
+                              <p class="heading-xl"style="color: var(--color-white); ">MODERN</p>
+                              <p class="heading-xl"style="color: var(--color-white); ">ART GALLERY</p>
+                             </td>
+                             <td>
+
+                            <img src="img/Imagen1.bmp"  style="width: 450px; height: 590px;">
+                            
+                             </td>
+                             <td>
+                        <div style=" margin: 10px;padding: 10px;border: 1px solid var(--color-white);">
+                            <p class="body-m"style="color: black; ">The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.</p>
+                              <a href="#location-info" class="button button--primary">
+                               OUR LOCATION
+                               <span class="arrow-icon">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M14.43 5.92999L20.5 12L14.43 18.07" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                   <path d="M3.5 12H20.33" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                 </svg>
+                                </span>
+                               </a>
+                        </div>
+                             </td>
+                        </tr>
+                     </table>
+
         </section>
 
         <section id="your-day" class="your-day-section">
-            <div class="container">
-                <h2 class="heading-l">YOUR DAY AT THE GALLERY</h2>
-                <p class="body-m">Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.</p>
-                <div class="gallery-images">
-                    <div class="gallery-image-item" style="background-image: url('https://placehold.co/600x400/D5966C/151515?text=Gallery+View+1');"></div>
-                    <div class="gallery-image-item" style="background-image: url('https://placehold.co/600x400/D5966C/151515?text=Gallery+View+2');"></div>
-                    <div class="gallery-image-item" style="background-image: url('https://placehold.co/600x400/D5966C/151515?text=Gallery+View+3');"></div>
-                </div>
+            <table style="border: none">
+                 <tr>
+                    <td>
+                    <h2 class="heading-l" text-align: right;>YOUR DAY AT THE GALLERY </h2>
+                    <p class="body-m" text-align: right; >Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.</p> 
+                    </td>
+                    <td >
+                     <div class="gallery-images" >
+                         <div class="gallery-image-item "  style="background-image: url('img/galeria_1.png') ">
+                         </div>     
+                     </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                     <div class="gallery-images" >
+                        <div class="gallery-image-item" style="background-image: url('img/galeria_3.png');width: 500px; height: 600px;"  ></div>     
+                     </div>
+                    </td>
+                    <td >
+                        <div class="gallery-images" >
+                         <div class="gallery-image-item" style="background-image: url('img/galeria_2.png');"  ></div>     
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                   <td >
+                          <div style="background-color: black;  width: 500px;  height: 300px;  top: 0;  left: 0;margin-left: auto; margin-right: 0;float: right;color: white; padding: 25px; ">
+                             <h2 class="heading-l">COME & BE INSPIRED</h2>
+                             <p class="body-m">We're excited to welcome you to our gallery and see how our collections influence you.</p>
+                          </div>
+                   </td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="basic" class="basic-section ">
+          <div style=" display: flex;flex-direction: row;align-items: center;">
+             <div style=" margin: 10px;padding: 10px;border: 1px solid var(--color-dark);">
+                 <h3 class="logo-footer" >MODERN ART GALLERY</h3>
+             </div>
+             <div style=" margin: 1px;padding: 10px;border: 10px solid var(--color-dark);">
+                 <p class="body-s" >The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
+             </div>
+             <div style=" margin: 10px;padding: 10px;border: 1px solid var(--color-dark);">
+
+    				 <footer class="main-footer" style="background-color: var(--color-dark);">
+        <div class="container footer-content">
+             <div class="social-links" >
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <!-- SVG para Facebook -->
+                    <svg class="icono-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="instagram">
+                    <!-- SVG para instagram -->
+                    <svg class="icono-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.116 0-3.478.011-4.693.068-2.61.122-3.932 1.439-4.053 4.053-.057 1.215-.067 1.577-.067 4.693s.01 3.478.067 4.693c.121 2.61 1.443 3.932 4.053 4.053 1.215.057 1.577.067 4.693.067s3.478-.01 4.693-.067c2.61-.122 3.932-1.443 4.053-4.053.057-1.215.067-1.577.067-4.693s-.01-3.478-.067-4.693c-.121-2.61-1.443-3.932-4.053-4.053C15.478 3.614 15.116 3.603 12 3.603zm0 4.262c-2.403 0-4.35 1.947-4.35 4.35s1.947 4.35 4.35 4.35 4.35-1.947 4.35-4.35-1.947-4.35-4.35-4.35zm0 7.2c-1.549 0-2.79-1.241-2.79-2.79s1.241-2.79 2.79-2.79 2.79 1.241 2.79 2.79-1.241 2.79-2.79 2.79zm4.65-7.59c-.538 0-.975.437-.975.975s.437.975.975.975.975-.437.975-.975-.437-.975-.975-.975z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="twitter">
+                    <!-- SVG para twitter -->
+                    <svg class="icono-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M22.46 6c-.77.34-1.6.57-2.46.69.88-.53 1.56-1.37 1.88-2.37-.83.49-1.75.85-2.72 1.05C18.3 3.68 17.22 3 16 3c-2.37 0-4.3 1.93-4.3 4.3 0 .34.04.67.11.99C7.75 8.65 4.1 6.6 1.6 3.5c-.37.64-.58 1.39-.58 2.2 0 1.49.76 2.81 1.91 3.59-.7-.02-1.36-.21-1.93-.53v.05c0 2.08 1.48 3.81 3.44 4.2-1.4.38-2.88.14-4.16-.48.55 1.71 2.14 2.95 4.03 2.98C5.7 17.5 3.3 18.2 1 18.2c-.4 0-.8-.02-1.2-.07 2.08 1.34 4.56 2.13 7.23 2.13 8.7 0 13.43-7.21 13.43-13.43 0-.2-.01-.4-.02-.6.92-.66 1.72-1.49 2.35-2.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
             </div>
         </section>
 
         <section id="location-info" class="location-info-section">
             <div class="container">
-                <h2 class="heading-l">OUR LOCATION</h2>
-                <div class="location-details">
-                    <p class="heading-s">99 KING STREET<br>Newport<br>RI 02840<br>United States of America</p>
-                    <p class="body-m">Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm.</p>
-                </div>
-                <div class="map-placeholder" role="img" aria-label="Mapa de la ubicación de la galería">
-                    <!-- Aquí iría un iframe de Google Maps real o una imagen de mapa -->
-                </div>
-                <div class="back-home-button-wrapper">
-                    <a href="#home" class="button button--secondary">
+                               <div class="back-home-button-wrapper">
+                    <a href="#" class="button button--secondary">
                         <span class="arrow-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.43 5.92999L20.5 12L14.43 18.07" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -72,6 +132,23 @@
                         BACK TO HOME
                     </a>
                 </div>
+                <div class="map-placeholder" role="img" aria-label="Mapa de la ubicación de la galería">
+                    <!-- Aquí iría un iframe de Google Maps real o una imagen de mapa -->
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5978.117824225013!2d-71.31292692502714!3d41.48132249016493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e5af5d9ad9f351%3A0x9bf38f9aed123934!2s99%20King%20St%2C%20Newport%2C%20RI%2002840%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1752755384458!5m2!1ses!2ses" width="1300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                <div style=" display: flex;flex-direction: row;align-items: center;">
+                  <div style=" margin: 10px;padding: 10px;border: 1px solid var(--color-dark);">
+                    <h2 class="heading-l">OUR LOCATION</h2>
+                  </div>
+                  <div style=" margin: 10px;padding: 10px;border: 1px solid var(--color-dark);">
+                   <div class="location-details">
+                       <p class="heading-s">99 KING STREET</p>
+                       <p class="heading-s" style="color:white">Newport<br>RI 02840<br>United States of America</p>
+                       <p class="body-m" style="color: white">Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm.</p>
+                    </div>
+                  </div>
+                </div>
             </div>
         </section>
 
@@ -79,13 +156,25 @@
 
     <footer class="main-footer">
         <div class="container footer-content">
-            <h3 class="logo-footer">MODERN ART GALLERY</h3>
-            <p class="body-s">The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
-            <div class="social-links">
+            <h3 class="logo-footer" style="color: black">MODERN ART GALLERY</h3>
+            <p class="body-s" style="color: black">The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
+            <div class="social-links-Darck" >
                 <a href="#" class="social-icon" aria-label="Facebook">
                     <!-- SVG para Facebook -->
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.197 21.5H13.802V24H9.197V21.5ZM2.894 10.378C2.894 6.745 5.86 3.779 9.493 3.779C13.127 3.779 16.092 6.745 16.092 10.378C16.092 13.565 13.916 16.297 10.978 17.514V14.931H14.195C14.739 14.931 15.183 14.487 15.183 13.943V11.23C15.183 10.686 14.739 10.242 14.195 10.242H10.978V8.125C10.978 7.581 10.534 7.137 9.99 7.137H8.815V10.242H6.5C5.956 10.242 5.512 10.686 5.512 11.23V13.943C5.512 14.487 5.956 14.931 6.5 14.931H8.815V17.514C5.877 16.297 3.701 13.565 3.701 10.378H2.894Z" fill="white"/>
+                    <svg class="icono-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="instagram">
+                    <!-- SVG para instagram -->
+                    <svg class="icono-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.116 0-3.478.011-4.693.068-2.61.122-3.932 1.439-4.053 4.053-.057 1.215-.067 1.577-.067 4.693s.01 3.478.067 4.693c.121 2.61 1.443 3.932 4.053 4.053 1.215.057 1.577.067 4.693.067s3.478-.01 4.693-.067c2.61-.122 3.932-1.443 4.053-4.053.057-1.215.067-1.577.067-4.693s-.01-3.478-.067-4.693c-.121-2.61-1.443-3.932-4.053-4.053C15.478 3.614 15.116 3.603 12 3.603zm0 4.262c-2.403 0-4.35 1.947-4.35 4.35s1.947 4.35 4.35 4.35 4.35-1.947 4.35-4.35-1.947-4.35-4.35-4.35zm0 7.2c-1.549 0-2.79-1.241-2.79-2.79s1.241-2.79 2.79-2.79 2.79 1.241 2.79 2.79-1.241 2.79-2.79 2.79zm4.65-7.59c-.538 0-.975.437-.975.975s.437.975.975.975.975-.437.975-.975-.437-.975-.975-.975z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="twitter">
+                    <!-- SVG para twitter -->
+                    <svg class="icono-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M22.46 6c-.77.34-1.6.57-2.46.69.88-.53 1.56-1.37 1.88-2.37-.83.49-1.75.85-2.72 1.05C18.3 3.68 17.22 3 16 3c-2.37 0-4.3 1.93-4.3 4.3 0 .34.04.67.11.99C7.75 8.65 4.1 6.6 1.6 3.5c-.37.64-.58 1.39-.58 2.2 0 1.49.76 2.81 1.91 3.59-.7-.02-1.36-.21-1.93-.53v.05c0 2.08 1.48 3.81 3.44 4.2-1.4.38-2.88.14-4.16-.48.55 1.71 2.14 2.95 4.03 2.98C5.7 17.5 3.3 18.2 1 18.2c-.4 0-.8-.02-1.2-.07 2.08 1.34 4.56 2.13 7.23 2.13 8.7 0 13.43-7.21 13.43-13.43 0-.2-.01-.4-.02-.6.92-.66 1.72-1.49 2.35-2.44z"/>
                     </svg>
                 </a>
             </div>

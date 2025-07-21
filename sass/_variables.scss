@@ -1,0 +1,32 @@
+[cite_start]// Colores [cite: 246, 247, 248, 249, 262]
+$color-primary: #D5966C; [cite_start]// Naranja/Marrón [cite: 247]
+$color-dark: #151515;    [cite_start]// Gris muy oscuro [cite: 248]
+$color-medium-gray: #444444; [cite_start]// Gris medio [cite: 249]
+$color-white: #FFFFFF;    [cite_start]// Blanco [cite: 262]
+
+// Tipografía - Fuentes
+$font-heading: 'Big Shoulders Display', sans-serif;
+$font-body: 'Outfit', sans-serif;
+
+// Tipografía - Tamaños y espaciados de línea
+$font-size-xl-heading: 96px;
+$line-height-xl-heading: 88px;
+
+$font-size-l-heading: 70px;
+$line-height-l-heading: 70px;
+
+$font-size-m-heading: 60px;
+$line-height-m-heading: 50px;
+
+$font-size-s-heading: 36px;
+$line-height-s-heading: 36px;
+
+$font-size-m-body: 22px;
+$line-height-m-body: 32px;
+
+$font-size-s-body: 18px;
+$line-height-s-body: 28px;
+
+// Breakpoints (para mobile-first)
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

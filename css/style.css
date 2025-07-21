@@ -89,6 +89,7 @@
             font-size: clamp(2rem, 6vw + 1rem, var(--font-size-l-heading));
             line-height: clamp(2rem, 6vw + 1rem, var(--line-height-l-heading));
             text-transform: uppercase;
+            text-align: left;
         }
 
         .heading-m {
@@ -213,7 +214,7 @@
             SECCIONES PRINCIPALES
         */
         .hero-section {
-            background: var(--color-dark) url('https://placehold.co/1200x800/151515/FFFFFF?text=Gallery+Interior') no-repeat center center/cover; /* Placeholder de imagen */
+            background: var(--color-white) url('img/Imagen1.bmp') no-repeat center center/cover; /* Placeholder de imagen */
             min-height: 80vh; /* Altura mínima para que se vea el contenido */
             display: flex;
             align-items: center; /* Centra verticalmente el contenido */
@@ -263,10 +264,12 @@
                 font-size: 1.5rem;
                 background-size: cover;
                 background-position: center;
+                 width: 500px;
+                height: 300px; /* Altura fija para las imágenes */
             }
-            .gallery-image-item:nth-child(1) { background-image: url('https://placehold.co/600x400/444444/FFFFFF?text=Art+Piece+1'); }
-            .gallery-image-item:nth-child(2) { background-image: url('https://placehold.co/600x400/444444/FFFFFF?text=Art+Piece+2'); }
-            .gallery-image-item:nth-child(3) { background-image: url('https://placehold.co/600x400/444444/FFFFFF?text=Art+Piece+3'); }
+            .gallery-image-item:nth-child(1) { background-image: url('img/galeria_1.png'); }
+            .gallery-image-item:nth-child(2) { background-image: url('img/galeria_2.png'); }
+            .gallery-image-item:nth-child(3) { background-image: url('img/galeria_3.png'); }
         }
 
         .location-info-section {
@@ -299,7 +302,7 @@
                 color: var(--color-white);
                 font-size: 1.5rem;
                 margin-top: 2rem;
-                background-image: url('https://placehold.co/800x400/444444/FFFFFF?text=Map+Placeholder');
+                background-image: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.0589121125063!2d-71.31292692502709!3d41.48132249016493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e5af5d9ad9f351%3A0x9bf38f9aed123934!2s99%20King%20St%2C%20Newport%2C%20RI%2002840%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1752754912097!5m2!1ses!2ses');
                 background-size: cover;
                 background-position: center;
             }
@@ -307,7 +310,23 @@
                 margin-top: 2rem;
             }
         }
+ .basic-section {
+             background-color: var(--color-dark);
+             text-align:left;
+             font-size: var(--font-size-s-body);
+             color: var(--color-white);
+            .container {
+              display: flex; /* O display: inline-block; */
+              flex-direction: row; /* Opcional, por defecto es row */
+              align-items: center; /* Opcional, para centrar verticalmente */
+             }
 
+            .block {
+              margin: 10px;
+              padding: 10px;
+              border: 1px solid var(--color-dark);
+             }
+        }
         .inspiration-section {
             background-color: var(--color-primary);
             color: var(--color-dark);
@@ -326,10 +345,10 @@
             FOOTER
         */
         .main-footer {
-            background-color: var(--color-dark);
+            background-color: var(--color-primary);
+             color: var(--font-dark);
             padding: 3rem 0;
             text-align: center;
-
             .logo-footer {
                 font-family: var(--font-heading);
                 font-weight: 900;
@@ -350,13 +369,30 @@
                     margin: 0 0.5rem;
                     /* Estilos para el icono SVG */
                     svg {
-                        width: 24px; /* Ajusta el tamaño del icono */
-                        height: 24px;
+                        width: 10px; /* Ajusta el tamaño del icono */
+                        height: 10px;
                         fill: var(--color-white);
                         transition: fill 0.3s ease;
                     }
                     &:hover svg {
                         fill: var(--color-primary); /* Ejemplo de hover para SVG */
+                    }
+                }
+            }
+            .social-links-Darck {
+                margin-top: 1rem;
+                a {
+                    display: inline-block;
+                    margin: 0 0.5rem;
+                    /* Estilos para el icono SVG */
+                    svg {
+                        width: 24px; /* Ajusta el tamaño del icono */
+                        height: 24px;
+                        fill: var(--color-dark);
+                        transition: fill 0.3s ease;
+                    }
+                    &:hover svg {
+                        fill: var(--color-white); /* Ejemplo de hover para SVG */
                     }
                 }
             }
@@ -393,6 +429,7 @@
 
             .main-footer {
                 text-align: left;
+                   color: var(--font-dark);
                 .footer-content {
                     display: flex;
                     justify-content: space-between;
@@ -437,3 +474,29 @@
                 height: 500px; /* Mayor altura del mapa */
             }
         }
+        .rectangulo-negro {
+  background-color: black;
+  width: 500px;
+  height: 600px;
+  top: 0;
+  left: 0;
+  margin-left: 0; 
+  margin-right: auto;
+  float: left;
+   color: white; /* ¡Importante para que el texto se vea! */
+  padding: 25px; /* Crea un margen interior para que el texto no se pegue a los bordes */
+
+}
+ .rectangulo {
+
+  width: 500px;
+  height: 600px;
+  top: 0;
+  left: 0;
+  margin-left: 0; 
+  margin-right: auto;
+  float: left;
+
+  padding: 25px; /* Crea un margen interior para que el texto no se pegue a los bordes */
+
+}
