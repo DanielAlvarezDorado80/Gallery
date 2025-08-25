@@ -74,57 +74,81 @@ a { text-decoration: none; color: inherit; }
 }
 .main-header .logo a { color: var(--color-white); }
 
-/* Menú hamburguesa */
+/* BOTÓN HAMBURGUESA */
 .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
 }
+
 .nav-toggle span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    margin: 5px;
-    background: var(--color-white);
-    transition: 0.3s;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
 
-/* Navegación móvil oculta */
+/* MENÚ OCULTO POR DEFECTO */
 .main-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
-    background: var(--color-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.4s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.4s ease-in-out;
 }
-.main-nav ul { list-style: none; }
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .main-nav li {
-    margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }
+
 .main-nav a {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-white);
-    transition: color 0.3s;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
-.main-nav a:hover { color: var(--color-primary); }
 
-/* Estado activo del menú */
+.main-nav a:hover {
+  color: #f39c12; /* color de hover */
+}
+
+/* ESTADO ACTIVO DEL MENÚ */
 .main-nav.active { right: 0; }
-.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.nav-toggle.active span:nth-child(2) { opacity: 0; }
-.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
-/* TABLET + DESKTOP */
-@media (min-width: var(--breakpoint-tablet)) {
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* TABLET+DESKTOP */
+@media (min-width: 768px) {
   .nav-toggle { display: none; }
 
   .main-nav {
@@ -140,32 +164,16 @@ a { text-decoration: none; color: inherit; }
 
   .main-nav ul {
     display: flex;
-    gap: 1rem; /* antes 2rem → reducimos separación */
+    gap: 2rem;
   }
 
-  .main-nav li {
-    margin: 0; /* eliminamos márgenes extra */
-  }
+  .main-nav li { margin: 0; }
 
   .main-nav a {
     font-size: 1rem;
-    color: var(--color-white);
-    padding: 0.5rem 0.8rem; /* un poquito de aire sin que se separen demasiado */
-    transition: background 0.3s, color 0.3s;
   }
+}
 
-  .main-nav a:hover {
-    color: var(--color-primary);
-    background: rgba(255,255,255,0.05); /* efecto hover más elegante */
-    border-radius: 6px;
-  }
-}
-.map-embed {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 8px; /* opcional para diseño más moderno */
-}
 /* ================= HERO SECTION ================= */
 .hero-section {
   width: 100%;
@@ -407,7 +415,7 @@ a { text-decoration: none; color: inherit; }
 .info-social img {
   width: 20px;
   height: 20px;
-  filter: brightness(0) invert(1); /* íconos en blanco */
+  filter: brightness(0) invert(1);
   transition: opacity 0.3s;
 }
 
@@ -437,6 +445,13 @@ a { text-decoration: none; color: inherit; }
   .info-social img {
     width: 18px;
     height: 18px;
+  }
+
+  /* Apilar los elementos uno encima de otro */
+  .info-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* opcional: alinear a la izquierda */
   }
 }
 
@@ -742,4 +757,3 @@ a { text-decoration: none; color: inherit; }
 .back-home-button-wrapper .button:focus .arrow-icon {
   transform: translateX(5px); /* la flecha se mueve ligeramente a la derecha */
 }
-
