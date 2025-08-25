@@ -14,26 +14,22 @@
 
   <!-- HEADER -->
   <header class="main-header">
-    <div class="container header-content">
+     <!-- Botón hamburguesa -->
+  <button class="nav-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-
-<!-- Botón hamburguesa -->
-<button class="nav-toggle" aria-label="Abrir menú">
-  <span></span><span></span><span></span>
-</button>
-
-
-      <!-- Navegación -->
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#gallery-section">Galería</a></li>
-          <li><a href="#location-info">Ubicación</a></li>
-          <li><a href="#info-basic">Sobre Nosotros</a></li>
-          <li><a href="#footer">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Navegación -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#gallery">Galería</a></li>
+      <li><a href="#info">Información</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main>
@@ -259,10 +255,17 @@
 
   <!-- JS NAV -->
 <script>
+
 // Scroll suave para todos los enlaces internos
 const nav = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.nav-toggle');
+  const toggleButton = document.querySelector('.nav-toggle');
 
+
+toggleButton.addEventListener('click', () => {
+  toggleButton.classList.toggle('active');
+  nav.classList.toggle('active');
+});
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -305,4 +308,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 </body>
 </html>
+
 
